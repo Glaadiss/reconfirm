@@ -1,0 +1,9 @@
+{
+    "extends": "react-app",
+    "rules": {
+        "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }],
+        "quotes": [2, "double"],
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
+    }
+} 

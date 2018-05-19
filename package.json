@@ -1,8 +1,8 @@
 {
   "name": "reconfirm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React & redux confirm boxes with ease",
-  "main": "index.js",
+  "main": "./dist/lib/index.js",
   "scripts": {
     "start": "./node_modules/.bin/parcel src/docs/index.html",
     "build": "./node_modules/.bin/webpack --mode=production",
@@ -12,13 +12,23 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "reconfirm": "^0.0.2"
   },
   "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.47",
     "@babel/preset-env": "^7.0.0-beta.47",
-    "babel-loader": "^8.0.0-beta",
+    "@babel/preset-react": "^7.0.0-beta.47",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.8.2",
     "parcel-bundler": "^1.8.1",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3",
