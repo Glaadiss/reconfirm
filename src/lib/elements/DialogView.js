@@ -1,15 +1,32 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const DialogView = props => {
+  const {
+    title,
+    confirmText,
+    cancelText,
+    dispatch,
+    onConfirm,
+    onCancel
+  } = props;
   return (
     <div className="popup">
-      <p>{props.title}</p>
+      <p>{title}</p>
       <div className="text-right">
-        <button className="btn btn-cancel">Cancel</button>
-        <button className="btn btn-primary">Ok</button>
+        <button onClick={() => dispatch(onConfirm)} className="btn btn-cancel">
+          {cancelText}
+        </button>
+        <button onClick={() => dispatch(onCancel)} className="btn btn-primary">
+          {confirmText}
+        </button>
       </div>
     </div>
   );
 };
 
-export { DialogView };
+const mapStateToProps = state => {
+  return state.confirmReducer;
+};
+
+export default connect(mapStateToProps, null)(DialogView);
