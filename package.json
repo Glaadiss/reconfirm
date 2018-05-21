@@ -1,6 +1,6 @@
 {
   "name": "reconfirm",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React & redux confirm boxes with ease",
   "main": "./dist/lib/index.js",
   "scripts": {
