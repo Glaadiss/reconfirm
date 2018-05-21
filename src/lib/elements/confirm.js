@@ -15,3 +15,9 @@ export const confirm = payload => {
     payload
   };
 };
+
+export const closeConfirm = () => {
+  return {
+    type: CLOSE_CONFIRM
+  };
+};
