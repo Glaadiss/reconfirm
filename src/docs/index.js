@@ -1,12 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { DialogView as Reconfirm } from "reconfirm";
+import { DialogView, confirm as reconfirm, confirmReducer } from "reconfirm";
+import { createStore, combineReducers } from "redux";
+import { Provider } from "react-redux";
+const REVERSE_STATE = "REVERSE_STATE";
 
-console.log(Reconfirm);
+const exampleReducer = (state = false, action) => {
+  return action.type === REVERSE_STATE ? !state : state;
+};
+
+const store = createStore(combineReducers({ exampleReducer, confirmReducer }));
+
 const App = () => (
-  <div>
-    <Reconfirm />
-  </div>
+  <Provider store={store}>
+    <div>
+      <button
+        onClick={() =>
+          store.dispatch(
+            reconfirm({
+              onConfirm: { type: REVERSE_STATE }
+            })
+          )
+        }
+      >
+        CLICK ME!
+      </button>
+      <br />
+      {store.getState().exampleReducer ? "STATE CHANGED" : ":("}
+      <br />
+      <DialogView />
+    </div>
+  </Provider>
 );
-console.log(App);
-ReactDOM.render(<Reconfirm />, document.getElementById("root"));
+
+ReactDOM.render(<App />, document.getElementById("root"));
