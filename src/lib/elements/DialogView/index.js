@@ -1,5 +1,5 @@
 import React from "react";
-import withConfirm from "./withConfirm";
+import withConfirm from "../withConfirm";
 
 const DialogView = props => {
   const { title, confirmText, cancelText, onConfirm, onCancel, isOpen } = props;

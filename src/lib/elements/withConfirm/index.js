@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { closeConfirm } from "./confirm";
+import { closeConfirm } from "../confirm";
 
 const withClose = (closeAction, dispatch) => action => {
   dispatch(action);

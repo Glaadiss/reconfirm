@@ -1,4 +1,4 @@
-import { OPEN_CONFIRM, CLOSE_CONFIRM, defaultPayload } from "./confirm";
+import { OPEN_CONFIRM, CLOSE_CONFIRM, defaultPayload } from "../confirm";
 
 const defaultState = {
   isOpen: false,
