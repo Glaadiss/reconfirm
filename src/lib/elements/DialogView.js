@@ -14,10 +14,10 @@ const DialogView = props => {
     <div className="popup">
       <p>{title}</p>
       <div className="text-right">
-        <button onClick={() => dispatch(onConfirm)} className="btn btn-cancel">
+        <button onClick={() => dispatch(onCancel)} className="btn btn-cancel">
           {cancelText}
         </button>
-        <button onClick={() => dispatch(onCancel)} className="btn btn-primary">
+        <button onClick={() => dispatch(onConfirm)} className="btn btn-primary">
           {confirmText}
         </button>
       </div>
