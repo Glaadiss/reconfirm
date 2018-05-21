@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import view from "reconfirm";
+import { DialogView as Reconfirm } from "reconfirm";
 
-console.log(view);
-const Reconfirm = view.default;
 console.log(Reconfirm);
 const App = () => (
   <div>
