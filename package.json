@@ -27,7 +27,7 @@
     "@babel/preset-flow": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.47",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "8.x",
     "babel-loader": "^7.1.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
