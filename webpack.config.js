@@ -1,5 +1,6 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
+const FlowBabelWebpackPlugin = require("flow-babel-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/lib/index.js"),
@@ -17,7 +18,8 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
         options: {
-          presets: ["@babel/preset-env", "@babel/react"]
+          plugins: ["transform-flow-comments"],
+          presets: ["@babel/preset-env", "@babel/react", "@babel/preset-flow"]
         }
       },
       {
@@ -25,5 +27,6 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       }
     ]
-  }
+  },
+  plugins: [new FlowBabelWebpackPlugin()]
 };

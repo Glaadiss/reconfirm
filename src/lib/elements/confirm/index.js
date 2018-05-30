@@ -1,3 +1,4 @@
+// @flow
 export const OPEN_CONFIRM = Symbol("OPEN_CONFIRM");
 export const CLOSE_CONFIRM = Symbol("CLOSE_CONFIRM");
 export const NOT_EXISTING = Symbol("NOT_EXISTING");
@@ -9,7 +10,15 @@ export const defaultPayload = {
   cancelText: "No"
 };
 
-export const confirm = payload => {
+type ConfirmPayload = {
+  onConfirm: { type: string },
+  onCancel: { type: string },
+  title: string,
+  confirmText: string,
+  cancelText: string
+};
+
+export const confirm = (payload: ConfirmPayload) => {
   return {
     type: OPEN_CONFIRM,
     payload

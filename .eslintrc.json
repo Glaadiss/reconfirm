@@ -1,5 +1,10 @@
 {
-    "extends": "react-app",
+    "extends": [
+        "plugin:flowtype/recommended", "react-app"
+    ],
+    "plugins": [
+        "flowtype"
+    ],
     "rules": {
         "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }],
         "quotes": [2, "double"],
